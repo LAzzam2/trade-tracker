@@ -1,0 +1,35 @@
+include ../../common-components/head/head.jade
+
+doctype html
+html
+	+head('jade-sass-seed')
+	body
+		ul.account-header
+			li.account-total 0
+			button( type="button" ).add-trade add trade
+		form(name="add-estimation", method="post")
+			ul.trades
+				li.trade
+					ul.header
+						li.trade-total 0
+					div.ticker
+						span.label Ticker
+						input(type="text", class="ticker-label", name="ticker", placeholder="Ticker")
+					button( type="button" ).add-action add action
+					ul.actions
+						li.action
+							div.buy-sell
+								span.label Action
+								select
+									option(value='Buy') Buy
+									option(value='Sell') Sell
+							div.quantity
+								span.label Quantity
+								input(type="text", name="quantity", placeholder="Lot Quantity")
+							div.price
+								span.label Price
+								input(type="text", name="price" placeholder="Individual Price")
+							div.value
+								span.label Value
+								p 0
+
